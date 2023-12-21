@@ -45,10 +45,6 @@ export default function TextForm(props){
 
      }
   
-
-  
-
-
  const handleOnChange=(even)=>{ 
   
   setText(even.target.value)

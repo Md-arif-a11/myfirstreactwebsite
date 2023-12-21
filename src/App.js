@@ -1,6 +1,6 @@
 import './App.css';
 import Alert from './componemt/Alert';
-// import About from './componemt/About';
+import About from './componemt/About';
 import Navbar from './componemt/Navbar';
 import TextForm from './componemt/TextForm';
 import React, { useState } from 'react';
@@ -40,25 +40,25 @@ function App() {
 
   return (
     <>
-      {/* <Router> */}
+      <Router>
 
         <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
 
         <div className="container my-3">
-          {/* <Switch> */}
-            {/* <Route exact path="/about" key="about" element={<About/>}>
+          <Switch>
+            <Route exact path="/about" key="about" element={<About/>}>
               <About />
-            </Route> */}
-            {/* <Route exact path="/" key="textform" element={<TextForm />}> */}
+            </Route> 
+            <Route exact path="/" key="textform" element={<TextForm />}>
             <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />
 
-            {/* </Route> */}
-          {/* </Switch> */}
+            </Route>
+          </Switch>
         </div>
 
 
-      {/* </Router> */}
+      </Router>
     </>
   );
 }
